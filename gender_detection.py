@@ -162,6 +162,8 @@ def detecter_genre(csv_path):
 
     df_lm.to_csv("genre_detecte/"+prefix+path.split(".")[0]+f"_gender_trf.csv")
 
+detecter_genre("annotation_manuelle/golden_selection.csv")
+exit()
 
 for modele in tqdm(["bloom-3b", "bloom-7b", "bloom-560m", "gpt2-fr", "vigogne-2-7b", "xglm-2.9B"]):
     print(modele)
